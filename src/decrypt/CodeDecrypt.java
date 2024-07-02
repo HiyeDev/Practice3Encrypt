@@ -18,6 +18,7 @@ public class CodeDecrypt {
     } else {
         configData.setNotAlphanumericCharactersSymbols(this.code - 2);
     }
+            configData.resetAllCount();
 
 }
 
@@ -30,7 +31,6 @@ public static void init (int code ) {
     } else {
         c = code;
     }
-    CodeEncrypt codeEncrypt = new CodeEncrypt(c);
 }
 
 private int[] findFirstPrimes() {

@@ -17,7 +17,7 @@ public class CodeEncrypt {
             } else {
                 configData.setNotAlphanumericCharactersSymbols(this.code - 2);
             }
-
+        configData.resetAllCount();
     }
 
     public static void init (int code ) {

@@ -1,6 +1,7 @@
 package encrypt;
 
 import configData.ConfigData;
+import decrypt.CodeDecrypt;
 import symbols.Alphabet;
 import symbols.NotAlphanumerics;
 import symbols.Numbers;
@@ -11,11 +12,13 @@ public class TypeEncrypt {
     private char[] message;
     ConfigData configData;
     NotAlphanumericEncrypt notAlphanumericsEncrypt;
+    CodeEncrypt codeEncrypt;
 
-    public TypeEncrypt(String message) {
+    public TypeEncrypt(String message, int code) {
         this.message = message.toLowerCase().toCharArray();
         configData = ConfigData.getInstance();
         this.notAlphanumericsEncrypt = new NotAlphanumericEncrypt();
+        this.codeEncrypt = new CodeEncrypt(code);
         checkAccentMark();
     }
 

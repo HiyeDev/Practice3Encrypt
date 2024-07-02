@@ -8,12 +8,13 @@ public class TypeDecrypt {
     private char[] encryptedMessage;
     ConfigData configData;
     NotAlphanumericDecrypt notAlphanumericDecrypt;
+    CodeDecrypt codeDecrypt;
 
     public TypeDecrypt (String message, int code) {
         this.encryptedMessage = message.toLowerCase().toCharArray();
         configData = ConfigData.getInstance();
         notAlphanumericDecrypt = new NotAlphanumericDecrypt(encryptedMessage);
-        CodeDecrypt.init(5);
+        codeDecrypt = new CodeDecrypt(code);
     }
 
     public String decryptMessage() {

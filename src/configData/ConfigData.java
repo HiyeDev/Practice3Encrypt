@@ -116,4 +116,11 @@ public class ConfigData {
     public void setCountMessage(int countMessage) {
         this.countMessage = countMessage;
     }
+
+    public void resetAllCount() {
+        setCountMessage(0);
+        setCountSizeLine(0);
+        setCountPrimeArray(0);
+        setCountCharacterEncryptPosition(1);
+    }
 }
