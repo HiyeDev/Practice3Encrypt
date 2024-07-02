@@ -33,18 +33,18 @@ public class TypeEncrypt {
                 } else {
                     s += writeRealNotAlphanumeric();
                 }
-                configData.setCountPrimeArray(configData.getCountPrimeArray() + 1);
-                configData.setCountMessage(configData.getCountMessage() + 1);
+                configData.incrementCountPrimeArray();
+                configData.incrementCountMessage();
             } else if (!isRealChar()) {
                 s += writeFalseCharacter();
             }
-            configData.setCountCharacterEncryptPosition(configData.getCountCharacterEncryptPosition() + 1);
-            configData.setCountSizeLine(configData.getCountSizeLine() + 1);
+            configData.incrementCountCharacterEncryptPosition();
+            configData.incrementCountSizeLine();
 
         }
         while (configData.getCountSizeLine() < configData.getSizeLine()) { //Este bucle rellena la linea si acabo el mensaje y hay huecos por rellenar, todos con caracteres falsos
             s += writeFalseCharacter();
-            configData.setCountSizeLine(configData.getCountSizeLine() + 1);
+            configData.incrementCountSizeLine();
         }
         return s;
     }
@@ -59,7 +59,7 @@ public class TypeEncrypt {
                 configData.setCountSizeLine(0);
             }
             s += c;
-            configData.setCountSizeLine(configData.getCountSizeLine() + 1);
+            configData.incrementCountSizeLine();
         }
         configData.setCountSizeLine(configData.getCountSizeLine() - 1); // Esta llamada de restarle uno es porque en el metodo principal donde pertence este meotdo, en el final de cada ciclo del while suma uno al contador del tamaño de linea.
         return s;

@@ -65,6 +65,10 @@ public class ConfigData {
         return countPrimeArray;
     }
 
+    public void incrementCountPrimeArray() {
+        this.countPrimeArray++;
+    }
+
     public void setCountPrimeArray(int countPrimeArray) {
         this.countPrimeArray = countPrimeArray;
     }
@@ -73,12 +77,20 @@ public class ConfigData {
         return countCharacterEncryptPosition;
     }
 
+    public void incrementCountCharacterEncryptPosition() {
+        this.countCharacterEncryptPosition++;
+    }
+
     public void setCountCharacterEncryptPosition(int countLetterEncryptPosition) {
         this.countCharacterEncryptPosition = countLetterEncryptPosition;
     }
 
     public int getCountSizeLine() {
         return countSizeLine;
+    }
+
+    public void incrementCountSizeLine() {
+        this.countSizeLine++;
     }
 
     public void setCountSizeLine(int countSizeLine) {
@@ -91,6 +103,10 @@ public class ConfigData {
 
     public void setCountRandomSymbolNotAlphanumeric(int countRandomSymbolNotAlphanumeric) {
         this.countRandomSymbolNotAlphanumeric = countRandomSymbolNotAlphanumeric;
+    }
+
+    public void incrementCountMessage() {
+        this.countMessage++;
     }
 
     public int getCountMessage() {
